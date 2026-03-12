@@ -1,0 +1,60 @@
+.subscribe {
+  padding: 70px 20px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.subscribe h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  font-family: "Playfair Display", serif;
+}
+
+.subscribe-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.subscribe-box input {
+  width: 350px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.subscribe-box button {
+  padding: 12px 20px;
+  background: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.subscribe-message{
+  margin-top:15px;
+  color:green;
+  font-weight:500;
+  font-family:Poppins;
+}
+
+.subscribe-box button:hover {
+  background: #444;
+}
+
+@media (max-width: 600px) {
+
+.subscribe-box {
+  flex-direction: column;
+}
+
+.subscribe-box input {
+  width: 100%;
+}
+
+.subscribe-box button {
+  width: 100%;
+}
+
+}

@@ -1,0 +1,84 @@
+/* Header Wrapper */
+.header {
+  background: #F5F2ED;
+  border-bottom: 1px solid #EAEAEA;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Center Content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 20px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111111;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #333333;
+  padding-bottom: 5px;
+  transition: 0.3s ease;
+}
+
+.nav a:hover {
+  color: #111111;
+}
+
+/* Active Link Underline */
+.nav a.active {
+  border-bottom: 2px solid #111111;
+  color: #111111;
+}
+
+/* Right Actions */
+.actions {
+  display: flex;
+  gap: 20px;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #333333;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.action-item:hover {
+  color: #111111;
+}
+@media (max-width: 992px) {
+  .nav {
+    display: none;
+  }
+
+  .actions span {
+    display: none;
+  }
+}
