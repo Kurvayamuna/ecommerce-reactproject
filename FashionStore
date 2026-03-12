@@ -1,0 +1,152 @@
+#FashionStore – React E-Commerce Website
+
+**FashionStore** is a modern **React.js E-Commerce web application** that allows users to browse fashion products, filter by category, add items to a shopping cart, manage product quantities, and view the total price converted from **USD ($) to Indian Rupees (₹)**.
+
+This project demonstrates **React component architecture, state management, API integration, and responsive UI development**.
+
+---
+
+##  Key Features
+
+✔ Modern responsive UI design
+✔ Product data fetched from **FakeStore API**
+✔ Category filtering (Women, Men, Jewelry, Accessories)
+✔ Add products to cart
+✔ Increase / Decrease product quantity
+✔ Remove products from cart
+✔ Real-time cart counter in navigation bar
+✔ Automatic cart total calculation
+✔ **Currency conversion (USD → INR)**
+✔ Email subscription section for offers
+✔ Contact form with validation
+
+---
+
+##  Tech Stack
+
+* **React.js**
+* **JavaScript (ES6)**
+* **HTML5**
+* **CSS3**
+* **React Router**
+* **FakeStore API**
+
+---
+
+##  API Used
+
+Product data is fetched from:
+
+```
+https://fakestoreapi.com
+```
+
+Endpoints used:
+
+```
+/products
+/products/categories
+/products/category/{category}
+```
+
+---
+
+##  Currency Conversion
+
+Product prices from the API are in **USD ($)** and converted to **Indian Rupees (₹)**.
+
+Example logic:
+
+```javascript
+const USD_TO_INR = 83;
+const priceINR = product.price * USD_TO_INR;
+```
+
+---
+
+##  Project Structure
+
+```
+fashionstore-react
+│
+├── public
+│
+├── src
+│   ├── assets
+│   ├── components
+│   ├── pages
+│   ├── App.js
+│   └── index.js
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/fashionstore-react.git
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the project
+
+```bash
+npm start
+```
+
+Application runs on:
+
+```
+http://localhost:3000
+```
+
+---
+
+##  Responsive Design
+
+The application is fully responsive and optimized for:
+
+* Desktop
+* Tablet
+* Mobile devices
+
+---
+
+##  Learning Outcomes
+
+Through this project I gained experience in:
+
+* React component-based architecture
+* State management with hooks
+* API integration using fetch
+* Client-side routing with React Router
+* Building responsive user interfaces
+
+---
+
+##  Future Improvements
+
+* Product search functionality
+* User authentication
+* Checkout system
+* Payment gateway integration
+* Wishlist feature
+* Admin dashboard
+
+---
+
+##  Author
+
+**Kurva Yamuna**
+
+Frontend Developer | React Developer
+
+
+Netlify: https://grand-pie-e2c9a1.netlify.app/
