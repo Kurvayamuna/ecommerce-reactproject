@@ -1,70 +1,199 @@
-# Getting Started with Create React App
+FashionStore – React E-Commerce Website
+Project Documentation
+1. Project Overview
+FashionStore is a modern E-Commerce clothing website built using React.js.
+The website allows users to browse products, add them to a cart, update quantities, and view total price in Indian Rupees (₹).
+The project demonstrates frontend development, API integration, responsive UI design, and cart management.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2. Technologies Used
+Technology
+Purpose
+React.js
+Frontend framework
+HTML5
+Page structure
+CSS3
+Styling
+JavaScript (ES6)
+Logic and functionality
+React Router
+Page navigation
+FakeStore API
+Product data
+Canva
+Product images and UI design
 
-## Available Scripts
 
-In the project directory, you can run:
+3. Project Features
+🏠 Home Page
+Modern Hero Section
+Product Categories
+Featured Products
+Email Subscribe Section
+Footer with links
 
-### `npm start`
+🛒 Shop Page
+Fetch products using API
+Category filters:
+Women Clothing
+Men Clothing
+Jewelry
+Accessories
+Add products to cart
+Quantity control
+API used:
+https://fakestoreapi.com/products
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🛍️ Cart Page
+Cart system includes:
+✔ Add products
+✔ Increase quantity (+)
+✔ Decrease quantity (-)
+✔ Remove product
+✔ Cart counter in navbar
+✔ Automatic price calculation
+✔ Dollar converted to Indian Rupees
+Example conversion:
+$49 → ₹4067
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📧 Subscribe Section
+Users can subscribe to receive 10% discount offers by entering their email address.
+Features:
+Email validation
+Success notification
 
-### `npm run build`
+📞 Contact Page
+Contact form with fields:
+Name
+Email
+Phone Number
+Message
+Includes form validation.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Website Pages
+Page
+URL
+Home
+/
+Shop
+/shop
+Contact
+/contact
+Cart
+/cart
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Server runs on:
+http://localhost:3000/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+5. Folder Structure
+fashionstore-app
+│
+├── public
+│
+├── src
+│   ├── assets
+│   │   ├── Linen Dress.png
+│   │   ├── Casual Jacket.jpg
+│   │   ├── Stylish Handbag.jpg
+│   │   └── Classic Sneakers.jpg
+│
+│   ├── components
+│   │   ├── Header.js
+│   │   ├── Footer.js
+│   │   ├── Hero.js
+│   │   ├── Categories.js
+│   │   ├── FeaturedProducts.js
+│   │   └── Subscribe.js
+│
+│   ├── pages
+│   │   ├── Home.js
+│   │   ├── Shop.js
+│   │   ├── Cart.js
+│   │   └── Contact.js
+│
+│   ├── App.js
+│   └── index.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. Cart System Logic
+Cart is managed using React State.
+Example structure:
+cart = [
+{
+id:1,
+title:"Linen Dress",
+price:49,
+quantity:2
+}
+]
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Functions used:
+addToCart()
+increaseQty()
+decreaseQty()
+removeItem()
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+7. Currency Conversion
+Prices from API are in USD ($).
+They are converted into Indian Rupees (₹) using:
+1 USD = 83 INR
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Example:
+const priceINR = product.price * 83
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+8. Responsive Design
+Website is responsive for:
+Desktop
+Tablet
+Mobile
+CSS media queries used.
+Example breakpoint:
+@media(max-width:768px)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+9. Installation & Setup
+Step 1
+Install Node.js
+Step 2
+Create React project
+npx create-react-app fashionstore-app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Step 3
+Install router
+npm install react-router-dom
 
-### Making a Progressive Web App
+Step 4
+Run project
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Website will run on:
+http://localhost:3000
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+10. Future Improvements
+Possible enhancements:
+Product search
+User authentication
+Checkout page
+Payment gateway integration
+Wishlist feature
+Admin dashboard
 
-### Deployment
+11. Conclusion
+The FashionStore E-Commerce Website demonstrates how to build a modern shopping website using React.js with API integration and cart functionality.
+This project helps developers understand:
+React component architecture
+State management
+API fetching
+Routing
+Responsive design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+✅ Project Status: Completed (Frontend)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
